@@ -20,7 +20,7 @@ function realizarRequest(event) {
     event.preventDefault();
 
     // Abrir uma nova aba/janela imediatamente e salvar a referência
-    const newWindow = window.open('', '_blank');
+    //const newWindow = window.open('', '_blank');
    
     // Parametros Mobile
     // const instanciaApp = '1'; // sandbox
@@ -92,8 +92,8 @@ function realizarRequest(event) {
                                     // Redireciona para o linkMagico
                                     //window.location.href = linkMagico;
                                     //window.open(linkMagico, '_blank');
-                                    //window.open(linkMagico, '_blank', 'noopener,noreferrer');
-                                    newWindow.location = linkMagico;
+                                    window.open(linkMagico, '_blank', 'noopener,noreferrer');
+                                    //newWindow.location = linkMagico;
                                     
 
 
@@ -104,7 +104,7 @@ function realizarRequest(event) {
                                 .catch(error => {
                                     console.error('Ocorreu um erro na requisição do linkMagico:', error);
                                     // Fechar a nova janela se houver um erro
-                                    newWindow.close();
+                                    //newWindow.close();
                                     
                                 });
 
