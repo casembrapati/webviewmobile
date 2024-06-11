@@ -3,10 +3,10 @@ let linkMagicoGlobal;
 let origemData;
 let originalButtonText = document.getElementById('openLinkButtonConexa').innerText;
 
-function reloadPage() {
-    // Recarregar a página
-    location.reload();
-}
+//function reloadPage() {
+    //// Recarregar a página
+    //location.reload();
+//}
 
 function realizarRequest(event) {
     // Altera o texto do link para "Carregando..."
@@ -87,15 +87,15 @@ function realizarRequest(event) {
                                     // exibirChaveUnica(id, chaveUnica, linkMagico); // Passar chaveUnica e linkMagico para a função
                                     
                                     // Redireciona para o linkMagico
-                                    //window.location.href = linkMagico;
+                                    window.location.href = linkMagico;
                                     //window.open(linkMagico, '_blank');
-                                    window.open(linkMagico, '_blank', 'noopener,noreferrer');
+                                    //window.open(linkMagico, '_blank', 'noopener,noreferrer');
                                     
 
 
                                     
                                    // Recarregar a página após a operação
-                                    reloadPage();
+                                   // reloadPage();
                                 })
                                 .catch(error => {
                                     console.error('Ocorreu um erro na requisição do linkMagico:', error);
