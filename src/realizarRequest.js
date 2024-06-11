@@ -18,6 +18,9 @@ function realizarRequest(event) {
 
     // Impede o comportamento padrão do link
     event.preventDefault();
+
+    // Abrir uma nova aba/janela imediatamente e salvar a referência
+    const newWindow = window.open('', '_blank');
    
     // Parametros Mobile
     // const instanciaApp = '1'; // sandbox
@@ -100,6 +103,9 @@ function realizarRequest(event) {
                                 })
                                 .catch(error => {
                                     console.error('Ocorreu um erro na requisição do linkMagico:', error);
+                                    // Fechar a nova janela se houver um erro
+                                    newWindow.close();
+                                    
                                 });
 
                         })
